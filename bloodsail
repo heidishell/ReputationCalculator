@@ -27,40 +27,40 @@ int main(void)
         switch(selection) {
 
         case 1:
-			hated();
-			break;
+		hated();
+		break;
 
         case 2:
-            hostile();
-            break;
+            	hostile();
+            	break;
 
         case 3:
-			unfriendly();
-			break;
+		unfriendly();
+		break;
 			
-		case 4:
-			neutral();
-			break;
+	case 4:
+		neutral();
+		break;
 			
-		case 5:
-			friendly();
-			break;
+	case 5:
+		friendly();
+		break;
 			
-		case 6:
-			honored();
-			break;
+	case 6:
+		honored();
+		break;
 			
-		case 7:
-			revered();
-			break;
+	case 7:
+		revered();
+		break;
 			
-		case 8:
-			exalted();
-			break;
+	case 8:
+		exalted();
+		break;
 			
-		case 9:
-			information();
-			break;
+	case 9:
+		information();
+		break;
 
          default:
             printf("Please enter the number corresponding to your reputation level.\n");
@@ -100,9 +100,9 @@ void hated(void) {
 	int points;
 	float bonus;
 	printf("What is your # of reputation points into Hated?\n"
-		"This number should be out of 36,000.\n");
+		"This number should be out of 36000.\n");
 	scanf("%d", &points);
-	printf("You are %d out of 36,000 in Hated.\n"
+	printf("You are %d out of 36000 in Hated.\n"
 		"Do you have any reputation bonuses?\n"
 		"You'll want to enter this as a combined decimal.\n"
 		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
@@ -121,9 +121,9 @@ void hostile(void) {
 	int points;
 	float bonus;
 	printf("What is your # of reputation points into Hostile?\n"
-		"This number should be out of 3,000.\n");
+		"This number should be out of 3000.\n");
 	scanf("%d", &points);
-	printf("You are %d out of 3,000 in Hostile.\n"
+	printf("You are %d out of 3000 in Hostile.\n"
 		"Do you have any reputation bonuses?\n"
 		"You'll want to enter this as a combined decimal.\n"
 		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
@@ -140,11 +140,10 @@ void hostile(void) {
 void unfriendly(void) {
 	int points;
 	float bonus;
-	printf("----------------------------------------\n"
-		"What is your # of reputation points into Unfriendly?\n"
-		"This number should be out of 3,000.\n");
+	printf("What is your # of reputation points into Unfriendly?\n"
+		"This number should be out of 3000.\n");
 	scanf("%d", &points);
-	printf("You are %d out of 3,000 in Unfriendly.\n"
+	printf("You are %d out of 3000 in Unfriendly.\n"
 		"Do you have any reputation bonuses?\n"
 		"You'll want to enter this as a combined decimal.\n"
 		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
@@ -161,11 +160,10 @@ void unfriendly(void) {
 void neutral(void) {
 	int points;
 	float bonus;
-	printf("----------------------------------------\n"
-		"What is your # of reputation points into Neutral?\n"
-		"This number should be out of 3,000.\n");
+	printf("What is your # of reputation points into Neutral?\n"
+		"This number should be out of 3000.\n");
 	scanf("%d", &points);
-	printf("You are %d out of 3,000 in Neutral.\n"
+	printf("You are %d out of 3000 in Neutral.\n"
 		"Do you have any reputation bonuses?\n"
 		"You'll want to enter this as a combined decimal.\n"
 		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
@@ -183,9 +181,9 @@ void friendly(void) {
 	int points;
 	float bonus;
 	printf("What is your # of reputation points into Friendly?\n"
-		"This number should be out of 6,000.\n");
+		"This number should be out of 6000.\n");
 	scanf("%d", &points);
-	printf("You are %d out of 6,000 in Friendly.\n"
+	printf("You are %d out of 6000 in Friendly.\n"
 		"Do you have any reputation bonuses?\n"
 		"You'll want to enter this as a combined decimal.\n"
 		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
@@ -193,7 +191,7 @@ void friendly(void) {
 	scanf("%f", &bonus);
 	int bruiser = (25 * bonus) + 25;
 	int final = (6000 - points) / bruiser;
-	printf("Congratulations! You are one level away!\n"
+	printf("Congratulations! You are one level away from being completed!\n"
 		"You are %d bruisers away from Honored!\n",
 		final);
 }
