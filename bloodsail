@@ -1,0 +1,228 @@
+/*
+ * Bloodsail Buccaneers Reputation Calculator
+ * Heidi S.
+ * Started 02-04-2021
+ */
+
+#include <stdio.h>
+
+
+int menu(void);   //prototype definition section
+void hated(void); // reputation levels
+void hostile(void);
+void unfriendly(void);
+void neutral(void);
+void friendly(void);
+void honored(void);
+void revered(void);
+void exalted(void);
+void information(void);
+
+int main(void)
+{
+    int selection = menu();
+
+    while(selection != 99) {
+
+        switch(selection) {
+
+        case 1:
+			hated();
+			break;
+
+        case 2:
+            hostile();
+            break;
+
+        case 3:
+			unfriendly();
+			break;
+			
+		case 4:
+			neutral();
+			break;
+			
+		case 5:
+			friendly();
+			break;
+			
+		case 6:
+			honored();
+			break;
+			
+		case 7:
+			revered();
+			break;
+			
+		case 8:
+			exalted();
+			break;
+			
+		case 9:
+			information();
+			break;
+
+         default:
+            printf("Please enter the number corresponding to your reputation level.\n");
+        }
+
+    selection = menu();
+    }
+
+   return 0;
+}
+
+int menu(void) {
+    int choice;
+    printf("***************************\n");
+    printf(" 1. Hated \n");
+    printf(" 2. Hostile \n");
+    printf(" 3. Unfriendly\n");
+    printf(" 4. Neutral\n");
+    printf(" 5. Friendly\n");
+    printf(" 6. Honored\n");
+    printf(" 7. Revered\n");
+    printf(" 8. Exalted\n");
+    printf(" 9. What is this?\n");
+    printf("99. Exit\n");
+    printf("Please enter the number corresponding to your reputation level.\n");
+    printf("***************************\n");
+    scanf("%d", &choice);
+	getchar();
+    return choice;
+}
+
+void hello(void) {
+    printf("Hello, World!!!\n");
+}
+
+void hated(void) {
+	int points;
+	float bonus;
+	printf("What is your # of reputation points into Hated?\n"
+		"This number should be out of 36,000.\n");
+	scanf("%d", &points);
+	printf("You are %d out of 36,000 in Hated.\n"
+		"Do you have any reputation bonuses?\n"
+		"You'll want to enter this as a combined decimal.\n"
+		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
+		points);
+	scanf("%f", &bonus);
+	int bruiser = (25 * bonus) + 25;
+	int levelup = (36000 - points) / bruiser;
+	int honored = (51000 - points) / bruiser;
+	printf("You are %d bruisers away from Hostile!\n"
+		"You are %d bruisers away from Honored!\n",
+		levelup, honored);
+	
+}
+
+void hostile(void) {
+	int points;
+	float bonus;
+	printf("What is your # of reputation points into Hostile?\n"
+		"This number should be out of 3,000.\n");
+	scanf("%d", &points);
+	printf("You are %d out of 3,000 in Hostile.\n"
+		"Do you have any reputation bonuses?\n"
+		"You'll want to enter this as a combined decimal.\n"
+		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
+		points);
+	scanf("%f", &bonus);
+	int bruiser = (25 * bonus) + 25;
+	int levelup = (3000 - points) / bruiser;
+	int honored = (15000 - points) / bruiser;
+	printf("You are %d bruisers away from Hostile!\n"
+		"You are %d bruisers away from Honored!\n",
+		levelup, honored);
+}
+
+void unfriendly(void) {
+	int points;
+	float bonus;
+	printf("----------------------------------------\n"
+		"What is your # of reputation points into Unfriendly?\n"
+		"This number should be out of 3,000.\n");
+	scanf("%d", &points);
+	printf("You are %d out of 3,000 in Unfriendly.\n"
+		"Do you have any reputation bonuses?\n"
+		"You'll want to enter this as a combined decimal.\n"
+		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
+		points);
+	scanf("%f", &bonus);
+	int bruiser = (25 * bonus) + 25;
+	int levelup = (3000 - points) / bruiser;
+	int honored = (12000 - points) / bruiser;
+	printf("You are %d bruisers away from Hostile!\n"
+		"You are %d bruisers away from Honored!\n",
+		levelup, honored);
+}
+
+void neutral(void) {
+	int points;
+	float bonus;
+	printf("----------------------------------------\n"
+		"What is your # of reputation points into Neutral?\n"
+		"This number should be out of 3,000.\n");
+	scanf("%d", &points);
+	printf("You are %d out of 3,000 in Neutral.\n"
+		"Do you have any reputation bonuses?\n"
+		"You'll want to enter this as a combined decimal.\n"
+		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
+		points);
+	scanf("%f", &bonus);
+	int bruiser = (25 * bonus) + 25;
+	int levelup = (3000 - points) / bruiser;
+	int honored = (9000 - points) / bruiser;
+	printf("You are %d bruisers away from Hostile!\n"
+		"You are %d bruisers away from Honored!\n",
+		levelup, honored);
+}
+
+void friendly(void) {
+	int points;
+	float bonus;
+	printf("What is your # of reputation points into Friendly?\n"
+		"This number should be out of 6,000.\n");
+	scanf("%d", &points);
+	printf("You are %d out of 6,000 in Friendly.\n"
+		"Do you have any reputation bonuses?\n"
+		"You'll want to enter this as a combined decimal.\n"
+		"For example, I'm a human with the DMF buff, I'll enter in 0.2!\n",
+		points);
+	scanf("%f", &bonus);
+	int bruiser = (25 * bonus) + 25;
+	int final = (6000 - points) / bruiser;
+	printf("Congratulations! You are one level away!\n"
+		"You are %d bruisers away from Honored!\n",
+		final);
+}
+
+void honored(void) {
+	printf("Congratulations! You're Honored!\n"
+		"This function does not calculate revered+ reputation yet.\n");
+}
+
+void revered(void) {
+	printf("Congratulations! You're Revered!\n"
+		"This function does not calculate exalted reputation yet.\n");
+}
+
+void exalted(void) {
+	printf("Congratulations! You're Exalted!\n"
+		"You are completely done with the grind!\n");
+}
+
+void information(void) {
+	printf("This is a Bloodsail Buccaneers reputation calculator.\n"
+		"It calculates the number of Booty Bay Bruisers you'll have to grind.\n"
+	"You'll have to input three things:\n"
+		"1. Your current reputation level as listed on the menu.\n"
+		"2. Your number of reputation points into that level.\n"
+		"3. Any reputation bonuses you may have.\n"
+	"It'll give you two outputs:\n"
+		"1. How much until the next reputation level.\n"
+		"2. How much until honored.\n"
+		"It does not calculate to revered or exalted.\n");
+	
+}
