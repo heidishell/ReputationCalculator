@@ -1,4 +1,4 @@
-# Reputation
+# Reputation Calculators
 # World of Warcraft Shadowlands
 
 # 1. Bloodsail Buccaneers Calculator
